@@ -14,9 +14,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       LSFT_T(BR_T), BR_G, 				BR_M, RSFT_T(BR_N), RCTL_T(BR_E), 
       							RGUI_T(BR_I), BR_A,
   //|--------+--------+--------+--------+--------'    `--------+--------+--------+--------+--------|
-      BR_Q, LALT_T(BR_J), BR_V, BR_D, BR_K,             BR_X, BR_H, BR_SLSH, LALT_T(BR_COMM), BR_DOT,
+      BR_Q, BR_J, BR_V, BR_D, BR_K,             BR_X, BR_H, BR_SLSH, BR_COMM, BR_DOT,
   //|--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------|
-      BR_TRNS, LT(3,BR_ESC), LT(1,BR_SPC),                    LT(2,BR_BSPC), BR_ENT, BR_TRNS
+      BR_TRNS, LT(3,BR_TAB), LT(1,BR_SPC),                    LT(2,BR_BSPC), BR_ENT, BR_TRNS
                  //`--------------------------'     `--------------------------'
   ),
   
@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,----------------------------------------------.,-----------------------------------------.
       BR_NO, BR_NO, BR_NO, BR_NO, BR_NO,               KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, BR_NO,
   //|--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
-      BR_NO, BR_NO, BR_NO, BR_NO, BR_NO,               BR_NO, KC_MPLY, BR_NO, BR_NO, BR_NO,
+      KC_LALT, BR_NO, BR_NO, BR_ESC, BR_NO,               BR_NO, KC_MPLY, BR_NO, BR_NO, BR_NO,
   //|--------+--------+--------+---------+--------' `--------+--------+--------+--------+--------|
       BR_NO, BR_NO, BR_NO, BR_NO, BR_NO,               BR_NO, BR_NO, BR_QUOT, ACUT_CIRC, GRV_DIAE,
   //|--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------|
@@ -38,11 +38,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-------------------------------------------.    ,--------------------------------------------.
       BR_MINS, EXLM_PERC, BR_BSLS, DLR_TILD, HASH_AT,    BR_DEL, BR_HOME, BR_PGDN, BR_PGUP, BR_END,
   //|--------+--------+--------+--------+--------|    |--------+--------+--------+--------+--------|
-      PLUS_1, LBRC_2, LCBR_3, LPRN_4, AMPR_5,       	 BR_LEFT, BR_DOWN, BR_UP, BR_RGHT, BR_TAB,
+      PLUS_1, LBRC_2, LCBR_3, LPRN_4, AMPR_5,       	 BR_LEFT, BR_DOWN, BR_UP, BR_RGHT, KC_LALT,
   //|--------+--------+--------+--------+--------'    `--------+--------+--------+--------+--------|
       EQL_6, RBRC_7, RCBR_8, RPRN_9, ASTR_0,             KC_CUT, KC_COPY, KC_PASTE, KC_UNDO, KC_FIND,
   //|--------+--------+--------+--------+--------.    ,--------+--------+--------+--------+--------|
-                           BR_TRNS, BR_ESC, BR_SPC,    BR_TRNS, BR_TRNS, BR_TRNS
+                           BR_TRNS, BR_TAB, BR_SPC,    BR_TRNS, BR_TRNS, BR_TRNS
                     //`--------------------------'    i--------------------------'
   ),
   
