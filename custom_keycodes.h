@@ -4,22 +4,27 @@
 #include "custom_abnt2.h"
 
 enum custom_keycodes {
-    PLUS_1 = SAFE_RANGE,
-    LBRC_2,
-    LCBR_3,
-    LPRN_4,
-    AMPR_5,
-    EQL_6,
-    RBRC_7,
-    RCBR_8,
-    RPRN_9,
-    ASTR_0,
-    EXLM_PERC,
-    HASH_AT,
-    DLR_TILD,
-    GRV_DIAE,
-    ACUT_CIRC,
-    COLN_SCLN
+    D1_6 = SAFE_RANGE,
+    D2_7,
+    D3_8,
+    D4_9,
+    D5_0,
+
+    LR_BRC,
+    LR_CBR,
+    LR_PRN,
+    AT_HASH,
+    PERC_BSLS,
+    PLUS_ASTR,
+    AMPR_PIPE,
+    EQL_EXLM,
+    DLR_DIAE,
+    TILD_CIRC,
+    DQUO_QUOT,
+    UNDS_MINS,
+
+    // COLN_SCLN,
+    ACUT_GRV
 };
 
 bool process_shift_nums(uint16_t keycode, keyrecord_t *record);

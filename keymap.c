@@ -3,60 +3,46 @@
 #    include "keymap.h"
 #endif
 
+#include "custom_abnt2.h"
 #include "custom_keycodes.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x5(
   //,-------------------------------------------.    ,--------------------------------------------.
-      BR_W, BR_L, BR_Y, BR_P, BR_B, 			BR_Z, BR_F, BR_O, BR_U, COLN_SCLN,
+      KC_W, KC_L, KC_Y, KC_P, KC_B, 			KC_Z, KC_F, KC_O, KC_U, BR_SCLN,
   //|--------+--------+--------+--------+--------|    |--------+--------+--------+--------+--------|
-      BR_C, LGUI_T(BR_R), LCTL_T(BR_S), 
-      LSFT_T(BR_T), BR_G, 				BR_M, RSFT_T(BR_N), RCTL_T(BR_E), 
-      							RGUI_T(BR_I), BR_A,
+      LGUI_T(KC_C), LALT_T(KC_R),
+      LCTL_T(KC_S), LSFT_T(KC_T), KC_G, 				KC_M, RSFT_T(KC_N), RCTL_T(KC_E),
+      							                        RALT_T(KC_I), LGUI_T(KC_A),
   //|--------+--------+--------+--------+--------'    `--------+--------+--------+--------+--------|
-      BR_Q, BR_J, BR_V, BR_D, BR_K,             BR_X, BR_H, BR_SLSH, BR_COMM, BR_DOT,
+      KC_Q, KC_J, KC_V, KC_D, KC_K,                     KC_X, KC_H, BR_SLSH, KC_COMM, KC_DOT,
   //|--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------|
-      BR_TRNS, LT(3,BR_TAB), LT(1,BR_SPC),                    LT(2,BR_BSPC), BR_ENT, BR_TRNS
+      KC_TRNS, KC_TAB, LT(1,KC_SPC),              LT(2,KC_BSPC), KC_ENT, KC_TRNS
                  //`--------------------------'     `--------------------------'
   ),
-  
- 
-  
    [1] = LAYOUT_split_3x5(
   //,----------------------------------------------.,-----------------------------------------.
-      BR_NO, BR_NO, BR_NO, BR_NO, BR_NO,               KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, BR_NO,
+      KC_ESC, KC_PSCR, KC_NO, KC_NO, KC_NO,            KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, KC_MPLY,
   //|--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
-      KC_LALT, BR_NO, BR_NO, BR_ESC, BR_NO,               BR_NO, KC_MPLY, BR_NO, BR_NO, BR_NO,
+      KC_NO, KC_H, KC_J, KC_K, KC_L,                   KC_NO, UNDS_MINS, DQUO_QUOT, ACUT_GRV, BR_CCED,
   //|--------+--------+--------+---------+--------' `--------+--------+--------+--------+--------|
-      BR_NO, BR_NO, BR_NO, BR_NO, BR_NO,               BR_NO, BR_NO, BR_QUOT, ACUT_CIRC, GRV_DIAE,
+      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,               KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
   //|--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------|
-                    BR_TRNS, BR_TRNS, BR_TRNS,        BR_BSPC, BR_ENT, BR_TRNS
+                    KC_TRNS, KC_TRNS, KC_TRNS,         KC_BSPC, KC_ENT, KC_TRNS
                     //`--------------------------'  `--------------------------'
   ),
-  
    [2] = LAYOUT_split_3x5(
   //,-------------------------------------------.    ,--------------------------------------------.
-      BR_MINS, EXLM_PERC, BR_BSLS, DLR_TILD, HASH_AT,    BR_DEL, BR_HOME, BR_PGDN, BR_PGUP, BR_END,
+      D1_6, D2_7, D3_8, D4_9, D5_0,                     KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_END,
   //|--------+--------+--------+--------+--------|    |--------+--------+--------+--------+--------|
-      PLUS_1, LBRC_2, LCBR_3, LPRN_4, AMPR_5,       	 BR_LEFT, BR_DOWN, BR_UP, BR_RGHT, KC_LALT,
+      PLUS_ASTR, LR_BRC, LR_CBR, LR_PRN, EQL_EXLM,      KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_DEL,
   //|--------+--------+--------+--------+--------'    `--------+--------+--------+--------+--------|
-      EQL_6, RBRC_7, RCBR_8, RPRN_9, ASTR_0,             KC_CUT, KC_COPY, KC_PASTE, KC_UNDO, KC_FIND,
+      TILD_CIRC, PERC_BSLS, AT_HASH,
+      AMPR_PIPE, DLR_DIAE,        			KC_CUT, KC_COPY, KC_PASTE, KC_UNDO, KC_FIND,
   //|--------+--------+--------+--------+--------.    ,--------+--------+--------+--------+--------|
-                           BR_TRNS, BR_TAB, BR_SPC,    BR_TRNS, BR_TRNS, BR_TRNS
+                           KC_TRNS, KC_TAB, KC_SPC,    KC_TRNS, KC_TRNS, KC_TRNS
                     //`--------------------------'    i--------------------------'
-  ),
-  
-  [3] = LAYOUT_split_3x5(
-  //,----------------------------------------------.,-----------------------------------------.
-    KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,                KC_F16, KC_F17, KC_F18, KC_F19, KC_F20,
-//|--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------|
-    KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,               KC_F21, KC_F22, KC_F23, KC_F24, BR_NO,
-//|--------+--------+--------+---------+--------' `--------+--------+--------+--------+--------|
-    KC_F11, KC_F12, KC_F13, KC_F14, KC_F15,           BR_NO, BR_NO, BR_NO, BR_NO, BR_NO,
-  //|--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------|
-                    BR_TRNS, BR_TRNS, BR_TRNS,        BR_BSPC, BR_ENT, BR_TRNS
-                    //`--------------------------'  `--------------------------'
-)
+  )
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
